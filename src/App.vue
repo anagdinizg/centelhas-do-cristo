@@ -30,6 +30,21 @@ body {
 }
 
 .content {
-  background-color: rgb(251, 250, 250);
+  position: relative;
+  z-index: 0;
+  min-height: 100vh;
+  background-image: url('/src/assets/bgColor.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: -1;
 }
 </style>

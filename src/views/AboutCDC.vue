@@ -1,81 +1,237 @@
 <template>
   <v-container class="about-container">
-    <v-row class="full-height" align="center" justify="center">
+    <v-row align="center" justify="center" dense>
+
+      <!-- Card: Nossa Missão -->
       <v-col cols="12" md="8">
-        <v-card>
-          <v-card-title class="section-header text-center">
-            <h1 class="project-title">Sobre o projeto</h1>
-          </v-card-title>
-          <v-card-text>
-            <h1 class="section-title">Nossa missão</h1>
-            <p class="section-description">
-              No coração do Centelhas do Cristo está o compromisso de oferecer mais do que
-              refeições: entregamos esperança, dignidade e acolhimento àqueles que enfrentam as dificuldades mais
-              desafiadoras. O que começou com apenas duas pessoas cresceu graças à fé, à determinação e ao poder da
-              solidariedade. Com o passar do tempo, a vontade de impactar mais vidas trouxe novos voluntários e o apoio
-              da comunidade. Hoje, com uma equipe ativa de 10 voluntários, conseguimos levar mais de 180 refeições às
-              ruas todos os sábados, sempre com o mesmo propósito: alimentar corpos e almas. A missão do Centelhas do
-              Cristo vai além da caridade. Nosso objetivo é construir uma corrente de amor que inspire mais pessoas a
-              fazerem parte de uma transformação social. Cada marmita entregue não é apenas alimento, mas também um
-              gesto de cuidado e respeito por quem mais precisa. Seguimos movidos pela generosidade das doações e pela
-              força de quem acredita em nosso trabalho, provando que juntos podemos acender centelhas de esperança onde
-              mais falta luz.
-            </p>
-            <v-img src="src/assets/imagemGrupo.jpg" alt="Imagem do grupo" />
-            <h1 class="section-title">Quem somos</h1>
-            <p class="section-description">
-              O projeto Centelhas do Cristo nasceu com o propósito de levar alimento e
-              esperança para aqueles que mais
-              precisam. Criado em 2020 por Iris Naque com apoio do marido, os dois começaram a distribuir marmitas para
-              moradores de rua na cidade de Campina Grande, na Paraíba. Inicialmente, apenas os dois se dedicavam ao
-              projeto. Mesmo conseguindo alimentar algumas pessoas, a sensação de frustração por não conseguir ajudar
-              ainda mais pessoas era inevitável. Com esse desejo, muita fé e determinação, mais voluntários chegaram ao
-              projeto depois de divulgações de conhecido para conhecido. O time só aumentava, e a página no Instagram
-              surgiu. Havia certo receio em expandir as atividades para as redes sociais. O projeto sempre viveu a base
-              de doações, e continua assim até hoje. Com o apoio e participação de cada vez mais pessoas, atualmente, o
-              projeto conta com 10 voluntários constantemente ativos, que conseguem distribuir mais de 180 marmitas
-              todos os sábados.
-            </p>
-          </v-card-text>
-        </v-card>
+        <v-sheet class="info-section mission-section" elevation="3">
+          <div class="section-header">
+            <v-avatar size="56" color="#e9d8c2">
+              <v-icon color="#6b3e0d" size="32">mdi-heart-outline</v-icon>
+            </v-avatar>
+            <h2 class="section-title">Nossa missão</h2>
+          </div>
+          <p class="section-description">
+            No coração do <em>Centelhas do Cristo</em>, pulsa uma missão que vai muito além de alimentar o corpo:
+            queremos aquecer almas. Acreditamos que cada refeição entregue carrega junto uma porção de esperança,
+            carinho e dignidade. O que nasceu do gesto simples de dois corações dispostos a ajudar, hoje se tornou uma
+            verdadeira corrente de amor. Com a força da fé e da solidariedade, multiplicamos esforços e afetos: todos os
+            sábados, são mais de 180 marmitas servidas com dedicação.
+            <br><br>
+            Nossa missão é clara: transformar realidades com gestos de cuidado, mostrar que ninguém está sozinho e que a
+            luz da compaixão pode brilhar mesmo nos momentos mais escuros. Cada marmita não é apenas alimento — é prova
+            de que o amor move o mundo.
+          </p>
+        </v-sheet>
       </v-col>
+
+      <!-- Imagem do grupo -->
+      <v-col cols="12" md="8">
+        <v-img src="src/assets/imagemGrupo.jpg" alt="Imagem do grupo" class="group-image rounded" height="500" cover />
+      </v-col>
+
+      <!-- Card: Quem Somos -->
+      <v-col cols="12" md="8">
+        <v-sheet class="info-section identity-section" elevation="3">
+          <div class="section-header">
+            <v-avatar size="56" color="#e9d8c2">
+              <v-icon color="#6b3e0d" size="32">mdi-account-group</v-icon>
+            </v-avatar>
+            <h2 class="section-title">Quem somos</h2>
+          </div>
+          <p class="section-description">
+            Somos um grupo de voluntários movidos pelo amor ao próximo. O projeto <em>Centelhas do Cristo</em> nasceu em
+            2020, quando Iris Naque e seu marido decidiram, por conta própria, levar refeições a quem mais precisava nas
+            ruas de Campina Grande. Com o tempo, o gesto silencioso foi ecoando de pessoa para pessoa, ganhando força,
+            voz e propósito.
+            <br><br>
+            Hoje, somos dez corações atuando ativamente todos os sábados, unidos por um único desejo: levar não só
+            alimento, mas também escuta, presença e acolhimento. Vivemos da generosidade de doações, e acreditamos na
+            transformação através da empatia. Somos prova viva de que o bem se multiplica — e que a esperança, quando
+            partilhada, se torna infinita.
+          </p>
+        </v-sheet>
+      </v-col>
+
+      <!-- Card: Depoimentos -->
+      <v-col cols="12" md="8">
+        <v-sheet class="info-section stories-section" elevation="3">
+          <div class="section-header">
+            <v-avatar size="56" color="#e9d8c2">
+              <v-icon color="#6b3e0d" size="32">mdi-fire</v-icon>
+            </v-avatar>
+            <h2 class="section-title">Depoimentos</h2>
+          </div>
+          <v-row>
+            <v-col cols="12" v-for="(story, index) in stories" :key="index">
+              <v-card class="story-card">
+                <v-card-title class="story-name">
+                  <v-avatar size="40" color="#e9d8c2" class="mr-2">
+                    <v-icon color="#6b3e0d">mdi-account-heart</v-icon>
+                  </v-avatar>
+                  {{ story.name }}
+                </v-card-title>
+                <v-card-text class="story-text">
+                  <v-icon color="#a4bbd3" size="28" class="quote-icon">
+                    mdi-format-quote-open
+                  </v-icon>
+                  {{ story.text }}
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-sheet>
+      </v-col>
+
+      <!-- Card: Instagram -->
+      <v-col cols="12" md="8">
+        <v-sheet class="info-section instagram-section" elevation="4">
+          <div class="section-header">
+            <v-avatar size="56" color="#e9d8c2">
+              <v-icon color="#6b3e0d" size="32">mdi-instagram</v-icon>
+            </v-avatar>
+            <h2 class="section-title">Siga-nos no Instagram</h2>
+          </div>
+          <p class="section-description">
+            Fique por dentro das <strong>atualizações semanais</strong>, veja fotos, histórias e acompanhe de perto o
+            impacto que sua doação faz na vida de tantas pessoas.
+            <br /><br />
+            <v-row align="center" justify="center" class="my-4">
+              <v-btn class="instagram-button" href="https://www.instagram.com/centelhasdocristo" target="_blank" rounded
+                elevation="3">
+                <v-icon left color="#e9d8c2" class="mr-2">mdi-instagram</v-icon>
+                @centelhasdocristo
+              </v-btn>
+            </v-row>
+          </p>
+        </v-sheet>
+      </v-col>
+
     </v-row>
   </v-container>
 </template>
 
-<script>
-export default {
-  name: 'AboutCDC'
-}
+<script setup>
+import { ref } from 'vue';
+
+const stories = ref([
+  {
+    name: 'Luana Rodrigues (Voluntária)',
+    text: 'O projeto preencheu um enorme vazio na minha vida. Sei que fora da caridade não há salvação, e hoje me sinto cumprindo uma missão.'
+  },
+  {
+    name: 'Rossana Araújo (Voluntária)',
+    text: 'Sinto gratidão a Deus por poder auxiliar o próximo. Sinto que sou útil e que minha vida tem sentido.'
+  },
+  {
+    name: 'Alexandre Marques (Voluntário)',
+    text: 'No Centelhas de Cristo encontrei algo que faltava na minha vida: o sentimento de complemento, de missão.'
+  }
+]);
 </script>
 
 <style scoped>
-.about-container {
-  padding-top: 0;
+.info-section {
+  background-color: #fffdfc;
+  border-radius: 24px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.info-section:hover {
+  transform: translateY(-4px);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
 }
 
 .section-title {
-  font-size: 2rem;
+  margin-left: 1rem;
+  font-size: 1.5rem;
   color: #453728;
-  margin-bottom: 10px;
-}
-
-.project-title {
-  font-size: 2rem;
-  color: #453728;
-  word-wrap: break-word;
+  font-family: "Playwrite RO", cursive;
 }
 
 .section-description {
-  font-size: 1.3rem;
-  line-height: 2rem;
-  padding-bottom: 3rem;
+  font-size: 1.2rem;
+  line-height: 1.9rem;
   text-align: justify;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  color: #4a3d2e;
+  text-indent: 2rem;
+  background: #fff9f2;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: inset 0 0 6px rgba(107, 62, 13, 0.05);
 }
 
-v-card {
-  border-radius: 8px;
+.group-image {
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.story-card {
+  background-color: #fff9f2;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(107, 62, 13, 0.15);
+}
+
+.story-name {
+  font-weight: bold;
+  color: #453728;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.story-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4a3d2e;
+  position: relative;
+}
+
+.quote-icon {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  opacity: 0.2;
+  font-size: 3rem;
+}
+
+.instagram-button {
+  background-color: #6b3e0d;
+  color: #e9d8c2 !important;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.instagram-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(107, 62, 13, 0.2);
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
 }
 </style>

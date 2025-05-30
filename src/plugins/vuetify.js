@@ -1,6 +1,8 @@
 import { createVuetify } from "vuetify";
 import "vuetify/styles";
 import "@mdi/font/css/materialdesignicons.css";
+import * as components from "vuetify/components";
+import * as directives from "vuetify/directives";
 
 const vuetify = createVuetify({
   theme: {
@@ -27,6 +29,8 @@ const vuetify = createVuetify({
     icons: {
       iconfont: "mdi",
     },
+    components,
+    directives,
   },
 });
 
