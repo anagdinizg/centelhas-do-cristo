@@ -33,7 +33,7 @@ body {
   position: relative;
   z-index: 0;
   min-height: 100vh;
-  background-image: url('/src/assets/bgColor.png');
+  background-image: url('/public/assets/bgColor.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

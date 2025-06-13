@@ -17,6 +17,8 @@
           <v-btn :to="{ name: 'About' }" text>Sobre nós</v-btn>
           <v-btn :to="{ name: 'Donation' }" text>Doação</v-btn>
           <v-btn :to="{ name: 'Participate' }" text>Torne-se Membro</v-btn>
+          <v-btn :to="{ name: 'OurJob' }" text>Nosso Trabalho</v-btn>
+
         </v-col>
 
         <v-col cols="auto" class="d-flex d-md-none align-center justify-between">
@@ -53,6 +55,11 @@
       <v-list-item :to="{ name: 'Participate' }">
         <v-list-item-content>
           <v-list-item-title>Torne-se Membro</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+      <v-list-item :to="{ name: 'OurJob' }">
+        <v-list-item-content>
+          <v-list-item-title>Nosso Trabalho</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
     </v-list>

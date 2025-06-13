@@ -2,13 +2,12 @@
     <v-container fluid class="donation-container">
         <v-row class="justify-center">
             <v-col cols="12" md="10" lg="8">
-                <!-- Card principal: informações gerais -->
                 <v-card class="donation-main-card" elevation="4">
                     <v-card-title class="page-title">
                         <v-avatar size="56" color="#e9d8c2" class="mr-3">
                             <v-icon color="#6b3e0d" size="32">mdi-information</v-icon>
                         </v-avatar>
-                        Informações sobre doação
+                        Sobre doação
                     </v-card-title>
                     <v-card-text>
                         <div class="highlight-text">
@@ -29,9 +28,7 @@
                     </v-card-text>
                 </v-card>
 
-                <!-- Grid principal -->
                 <div class="donation-grid">
-                    <!-- 2 cards lado a lado: Por que doar? e O que fazemos com sua doação -->
                     <v-sheet class="info-section" elevation="3">
                         <div class="section-header">
                             <v-avatar size="56" color="#e9d8c2">
@@ -60,7 +57,6 @@
                         </div>
                     </v-sheet>
 
-                    <!-- Card O que doar ocupa duas colunas -->
                     <v-sheet class="info-section wide-card" elevation="3">
                         <div class="section-header">
                             <v-avatar size="56" color="#e9d8c2">
@@ -94,7 +90,6 @@
                         </v-list>
                     </v-sheet>
 
-                    <!-- Dois cards lado a lado: Onde doar e Como doar -->
                     <v-sheet class="info-section" elevation="3">
                         <div class="section-header">
                             <v-avatar size="56" color="#e9d8c2">
@@ -176,11 +171,11 @@ export default {
 <style scoped>
 .page-title {
     font-family: "Playwrite RO", cursive;
+    font-size: 1.1rem;
 }
 
 .highlight-text {
     background-color: rgba(222, 119, 40, 0.078);
-    /* marrom clarinho */
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: inset 0 0 6px rgba(107, 62, 13, 0.05);
@@ -198,7 +193,7 @@ export default {
 .donation-main-card {
     background-color: #fffdfc;
     border-radius: 24px;
-    padding: 2rem;
+    padding: 1.5rem;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease;
     display: flex;
@@ -206,6 +201,8 @@ export default {
     justify-content: flex-start;
     height: fit-content;
     margin-bottom: 2rem;
+    word-break: break-word;
+    white-space: normal;
 }
 
 .donation-main-card:hover {
@@ -215,8 +212,10 @@ export default {
 
 .donation-main-card .v-card-title {
     font-weight: 700;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     color: #453728;
+    word-break: break-word;
+    white-space: normal;
 }
 
 .donation-main-card .v-card-text {
@@ -226,14 +225,12 @@ export default {
     color: #453728;
 }
 
-/* Grid com cards */
 .donation-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
 
-/* Card que ocupa dois espaços na grid (largura dupla) */
 .wide-card {
     grid-column: span 2;
 }
@@ -326,7 +323,6 @@ export default {
     transform: scale(1.02);
 }
 
-/* Responsividade */
 @media (max-width: 800px) {
     .donation-grid {
         grid-template-columns: 1fr;

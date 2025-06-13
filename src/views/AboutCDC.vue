@@ -1,8 +1,6 @@
 <template>
   <v-container class="about-container">
     <v-row align="center" justify="center" dense>
-
-      <!-- Card: Nossa Missão -->
       <v-col cols="12" md="8">
         <v-sheet class="info-section mission-section" elevation="3">
           <div class="section-header">
@@ -25,12 +23,10 @@
         </v-sheet>
       </v-col>
 
-      <!-- Imagem do grupo -->
       <v-col cols="12" md="8">
-        <v-img src="src/assets/imagemGrupo.jpg" alt="Imagem do grupo" class="group-image rounded" height="500" cover />
+        <v-img src="/assets/equipe6.jpg" alt="Imagem do grupo" class="group-image rounded" height="500" cover />
       </v-col>
 
-      <!-- Card: Quem Somos -->
       <v-col cols="12" md="8">
         <v-sheet class="info-section identity-section" elevation="3">
           <div class="section-header">
@@ -53,7 +49,6 @@
         </v-sheet>
       </v-col>
 
-      <!-- Card: Depoimentos -->
       <v-col cols="12" md="8">
         <v-sheet class="info-section stories-section" elevation="3">
           <div class="section-header">
@@ -83,7 +78,6 @@
         </v-sheet>
       </v-col>
 
-      <!-- Card: Instagram -->
       <v-col cols="12" md="8">
         <v-sheet class="info-section instagram-section" elevation="4">
           <div class="section-header">
@@ -231,7 +225,7 @@ const stories = ref([
   }
 
   .section-description {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 </style>

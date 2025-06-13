@@ -17,7 +17,6 @@
                             acolher quem mais precisa.</strong>
                     </p>
 
-                    <!-- Observação Importante -->
                     <div class="highlight-info">
                         <v-avatar class="highlight-icon" size="40" color="#e9d8c2">
                             <v-icon color="#6b3e0d">mdi-calendar</v-icon>
@@ -116,7 +115,7 @@ export default {
 
 .section-title {
     margin-left: 1rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #453728;
     font-family: "Playwrite RO", cursive;
 }
@@ -134,7 +133,6 @@ export default {
     margin-bottom: 1rem;
 }
 
-/* OBSERVAÇÃO IMPORTANTE */
 .highlight-info {
     display: flex;
     align-items: flex-start;
@@ -156,13 +154,13 @@ export default {
 }
 
 .highlight-title {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #6b3e0d;
     margin-bottom: 0.25rem;
 }
 
 .highlight-body {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #4a3d2e;
     line-height: 1.5;
     text-align: justify;

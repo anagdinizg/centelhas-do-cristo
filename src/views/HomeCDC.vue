@@ -51,11 +51,19 @@ export default {
     return {
       cards: [
         {
+          title: 'Sobre o Projeto',
+          icon: 'mdi-information-outline',
+          subtitle: 'Conheça nossa jornada',
+          description: 'Entenda a missão e os valores que movem o Centelhas do Cristo.',
+          img: '/assets/equipe6.jpg',
+          link: { name: 'About' }
+        },
+        {
           title: 'Doações',
           icon: 'mdi-hand-heart',
           subtitle: 'Como e onde doar',
-          description: 'Descubra como suas contribuições ajudam a alimentar e transformar vidas.',
-          img: 'https://img.freepik.com/fotos-gratis/alto-angulo-de-pessoas-colocando-comida-na-caixa-de-doacoes_23-2148613143.jpg',
+          description: 'Descubra como suas contribuições ajudam a transformar vidas.',
+          img: '/assets/comida1.jpg',
           link: { name: 'Donation' }
         },
         {
@@ -63,25 +71,17 @@ export default {
           icon: 'mdi-account-plus',
           subtitle: 'Junte-se à nossa equipe',
           description: 'Participe ativamente levando cuidado e atenção para quem mais precisa.',
-          img: 'https://img.freepik.com/fotos-gratis/voluntario-segurando-caixa-com-comida-para-doacao_23-2148637976.jpg',
+          img: '/assets/equipe.jpg',
           link: { name: 'Participate' }
         },
         {
-          title: 'Relatos',
-          icon: 'mdi-book-open-page-variant',
-          subtitle: 'Histórias que inspiram',
-          description: 'Leia testemunhos que mostram como o amor transforma realidades.',
-          img: 'https://img.freepik.com/fotos-gratis/voluntarios-de-tiro-medio-com-doacoes-de-alimentos_23-2149182005.jpg',
-          link: { name: 'Stories' }
+          title: 'Nosso Trabalho',
+          icon: 'mdi-hands-pray',
+          subtitle: 'Veja nossas ações',
+          description: 'Veja como estamos fazendo a diferença na comunidade.',
+          img: '/assets/marmitas.jpg',
+          link: { name: 'OurJob' }
         },
-        {
-          title: 'Sobre o Projeto',
-          icon: 'mdi-information-outline',
-          subtitle: 'Conheça nossa jornada',
-          description: 'Entenda a missão e os valores que movem o Centelhas do Cristo.',
-          img: 'https://img.freepik.com/fotos-gratis/grupo-de-diferentes-pessoas-trabalhando-como-voluntario-em-um-banco-de-alimentos_23-2149012216.jpg',
-          link: { name: 'About' }
-        }
       ]
     }
   }
@@ -184,7 +184,7 @@ export default {
 .card-title {
   color: #7a4f1e;
   font-family: "Playwrite RO", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin-top: 10px;
   margin-bottom: 0;
@@ -193,7 +193,7 @@ export default {
 
 .card-subtitle {
   color: #7a4f1e;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: 500;
   font-style: italic;
   margin-bottom: 8px;
@@ -201,7 +201,7 @@ export default {
 }
 
 .card-description {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   color: #5a462a;
   margin: 0 10px 10px 10px;
   line-height: 1.4;
@@ -211,7 +211,7 @@ export default {
 
 .button-layout {
   font-family: "Playwrite RO", cursive;
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 700;
   margin: 0 16px 12px 16px;
   border-radius: 14px;
